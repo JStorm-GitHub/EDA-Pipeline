@@ -1,0 +1,434 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : s386
+Version: Q-2019.12
+Date   : Tue May 16 20:31:34 2023
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays =  2.39%
+
+  Startpoint: DFF_2/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_12 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_2/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_2/q_reg/Q (DFFX1_RVT)                0.17       0.17 r
+  DFF_2/q (dff_4)                          0.00       0.17 r
+  U144/Y (AND4X1_RVT)                      0.12 *     0.28 r
+  v13_D_12 (out)                           0.00 *     0.28 r
+  data arrival time                                   0.28
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.28
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.12
+
+
+  Startpoint: DFF_2/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_9 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_2/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_2/q_reg/Q (DFFX1_RVT)                0.17       0.17 f
+  DFF_2/q (dff_4)                          0.00       0.17 f
+  U80/Y (NAND4X0_RVT)                      0.07 *     0.24 r
+  U130/Y (NAND2X0_RVT)                     0.06 *     0.30 f
+  v13_D_9 (out)                            0.00 *     0.30 f
+  data arrival time                                   0.30
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.10
+
+
+  Startpoint: DFF_2/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_11 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_2/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_2/q_reg/Q (DFFX1_RVT)                0.17       0.17 f
+  DFF_2/q (dff_4)                          0.00       0.17 f
+  U80/Y (NAND4X0_RVT)                      0.07 *     0.24 r
+  U132/Y (NAND3X0_RVT)                     0.07 *     0.31 f
+  v13_D_11 (out)                           0.00 *     0.31 f
+  data arrival time                                   0.31
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.09
+
+
+  Startpoint: DFF_3/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_10 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_3/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_3/q_reg/Q (DFFX1_RVT)                0.16       0.16 r
+  DFF_3/q (dff_3)                          0.00       0.16 r
+  U146/Y (AND2X1_RVT)                      0.07 *     0.23 r
+  U143/Y (AND3X1_RVT)                      0.08 *     0.31 r
+  v13_D_10 (out)                           0.00 *     0.31 r
+  data arrival time                                   0.31
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.09
+
+
+  Startpoint: DFF_0/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_7 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_0/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_0/q_reg/Q (DFFX1_RVT)                0.16       0.16 r
+  DFF_0/q (dff_0)                          0.00       0.16 r
+  U92/Y (INVX1_RVT)                        0.03 *     0.19 f
+  U75/Y (AND2X1_RVT)                       0.08 *     0.27 f
+  U77/Y (AND2X1_RVT)                       0.06 *     0.33 f
+  v13_D_7 (out)                            0.00 *     0.33 f
+  data arrival time                                   0.33
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.07
+
+
+  Startpoint: DFF_2/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_8 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_2/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_2/q_reg/Q (DFFX1_RVT)                0.17       0.17 f
+  DFF_2/q (dff_4)                          0.00       0.17 f
+  U80/Y (NAND4X0_RVT)                      0.07 *     0.24 r
+  U131/Y (NOR2X1_RVT)                      0.09 *     0.34 f
+  v13_D_8 (out)                            0.00 *     0.34 f
+  data arrival time                                   0.34
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.06
+
+
+  Startpoint: DFF_0/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: v13_D_6 (output port clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_0/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_0/q_reg/Q (DFFX1_RVT)                0.16       0.16 r
+  DFF_0/q (dff_0)                          0.00       0.16 r
+  U92/Y (INVX1_RVT)                        0.03 *     0.19 f
+  U75/Y (AND2X1_RVT)                       0.08 *     0.27 f
+  U139/Y (AO22X1_RVT)                      0.08 *     0.34 f
+  v13_D_6 (out)                            0.00 *     0.34 f
+  data arrival time                                   0.34
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  clock uncertainty                        0.10       0.50
+  output external delay                   -0.10       0.40
+  data required time                                  0.40
+  -----------------------------------------------------------
+  data required time                                  0.40
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.06
+
+
+  Startpoint: DFF_4/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_0/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_4/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_4/q_reg/Q (DFFX1_RVT)                0.16       0.16 f
+  DFF_4/q (dff_2)                          0.00       0.16 f
+  U125/Y (NAND3X0_RVT)                     0.04 *     0.20 r
+  U138/Y (NAND2X0_RVT)                     0.04 *     0.24 f
+  DFF_0/d (dff_0)                          0.00       0.24 f
+  DFF_0/q_reg/D (DFFX1_RVT)                0.00 *     0.24 f
+  data arrival time                                   0.24
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  clock uncertainty                        0.10       0.10
+  DFF_0/q_reg/CLK (DFFX1_RVT)              0.00       0.10 r
+  library hold time                       -0.02       0.08
+  data required time                                  0.08
+  -----------------------------------------------------------
+  data required time                                  0.08
+  data arrival time                                  -0.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.16
+
+
+  Startpoint: DFF_0/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_4/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_0/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_0/q_reg/Q (DFFX1_RVT)                0.16       0.16 r
+  DFF_0/q (dff_0)                          0.00       0.16 r
+  U101/Y (OAI22X1_RVT)                     0.09 *     0.25 f
+  U78/Y (AND2X1_RVT)                       0.06 *     0.30 f
+  DFF_4/d (dff_2)                          0.00       0.30 f
+  DFF_4/q_reg/D (DFFX1_RVT)                0.00 *     0.30 f
+  data arrival time                                   0.30
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  clock uncertainty                        0.10       0.10
+  DFF_4/q_reg/CLK (DFFX1_RVT)              0.00       0.10 r
+  library hold time                       -0.01       0.09
+  data required time                                  0.09
+  -----------------------------------------------------------
+  data required time                                  0.09
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.22
+
+
+  Startpoint: DFF_1/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_1/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_1/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_1/q_reg/Q (DFFX1_RVT)                0.17       0.17 f
+  DFF_1/q (dff_5)                          0.00       0.17 f
+  U76/Y (NAND3X0_RVT)                      0.06 *     0.23 r
+  U148/Y (INVX0_RVT)                       0.04 *     0.27 f
+  U140/Y (AO22X1_RVT)                      0.06 *     0.33 f
+  DFF_1/d (dff_5)                          0.00       0.33 f
+  DFF_1/q_reg/D (DFFX1_RVT)                0.00 *     0.33 f
+  data arrival time                                   0.33
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  clock uncertainty                        0.10       0.10
+  DFF_1/q_reg/CLK (DFFX1_RVT)              0.00       0.10 r
+  library hold time                       -0.02       0.08
+  data required time                                  0.08
+  -----------------------------------------------------------
+  data required time                                  0.08
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.25
+
+
+  Startpoint: DFF_1/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_5/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_1/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_1/q_reg/Q (DFFX1_RVT)                0.17       0.17 f
+  DFF_1/q (dff_5)                          0.00       0.17 f
+  U124/Y (OA21X1_RVT)                      0.08 *     0.26 f
+  U79/Y (OA21X1_RVT)                       0.08 *     0.34 f
+  DFF_5/d (dff_1)                          0.00       0.34 f
+  DFF_5/q_reg/D (DFFX1_RVT)                0.00 *     0.34 f
+  data arrival time                                   0.34
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  clock uncertainty                        0.10       0.10
+  DFF_5/q_reg/CLK (DFFX1_RVT)              0.00       0.10 r
+  library hold time                       -0.02       0.08
+  data required time                                  0.08
+  -----------------------------------------------------------
+  data required time                                  0.08
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.26
+
+
+  Startpoint: DFF_2/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_2/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_2/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_2/q_reg/Q (DFFX1_RVT)                0.17       0.17 f
+  DFF_2/q (dff_4)                          0.00       0.17 f
+  U123/Y (NAND3X0_RVT)                     0.04 *     0.21 r
+  U121/Y (NAND2X0_RVT)                     0.04 *     0.26 f
+  U120/Y (AO21X1_RVT)                      0.09 *     0.35 f
+  DFF_2/d (dff_4)                          0.00       0.35 f
+  DFF_2/q_reg/D (DFFX1_RVT)                0.00 *     0.35 f
+  data arrival time                                   0.35
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  clock uncertainty                        0.10       0.10
+  DFF_2/q_reg/CLK (DFFX1_RVT)              0.00       0.10 r
+  library hold time                       -0.02       0.08
+  data required time                                  0.08
+  -----------------------------------------------------------
+  data required time                                  0.08
+  data arrival time                                  -0.35
+  -----------------------------------------------------------
+  slack (MET)                                         0.26
+
+
+  Startpoint: DFF_3/q_reg
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: DFF_3/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  DFF_3/q_reg/CLK (DFFX1_RVT)              0.00       0.00 r
+  DFF_3/q_reg/Q (DFFX1_RVT)                0.16       0.16 r
+  DFF_3/q (dff_3)                          0.00       0.16 r
+  U146/Y (AND2X1_RVT)                      0.07 *     0.23 r
+  U145/Y (NAND3X0_RVT)                     0.05 *     0.28 f
+  U134/Y (NAND3X0_RVT)                     0.06 *     0.34 r
+  DFF_3/d (dff_3)                          0.00       0.34 r
+  DFF_3/q_reg/D (DFFX1_RVT)                0.00 *     0.34 r
+  data arrival time                                   0.34
+
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  clock uncertainty                        0.10       0.10
+  DFF_3/q_reg/CLK (DFFX1_RVT)              0.00       0.10 r
+  library hold time                       -0.04       0.06
+  data required time                                  0.06
+  -----------------------------------------------------------
+  data required time                                  0.06
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.28
+
+
+1

@@ -1,0 +1,3 @@
+set file_name s386
+set c_area_effort medium
+set c_map_effort medium

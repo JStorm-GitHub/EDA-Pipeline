@@ -1,0 +1,7 @@
+set file_name s386
+set c_area_effort low
+set c_map_effort medium
+set in_delay 0.1
+set out_delay 0.1
+set s_load 0.2
+set s_clk_uncert 0.05

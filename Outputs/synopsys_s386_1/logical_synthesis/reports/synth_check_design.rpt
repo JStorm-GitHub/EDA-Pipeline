@@ -1,0 +1,16 @@
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12-SP1
+Date:        Tue May 16 20:31:01 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      2
+    Unconnected ports (LINT-28)                                     2
+--------------------------------------------------------------------------------
+
+Warning: In design 's386', port 'GND' is not connected to any nets. (LINT-28)
+Warning: In design 's386', port 'VDD' is not connected to any nets. (LINT-28)
+1

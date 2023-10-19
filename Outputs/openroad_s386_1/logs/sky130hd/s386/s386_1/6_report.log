@@ -1,0 +1,311 @@
+OpenROAD v2.0-7988-g20b9074 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-0357] virtual clock clk can not be propagated.
+[INFO] Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0008] extracting parasitics of s386 ...
+[INFO RCX-0435] Reading extraction model file ./platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation s386 (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 383 rc segments
+[INFO RCX-0439] Coupling Cap extraction s386 ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0043] 739 wires to be extracted
+[INFO RCX-0442] 50% completion -- 374 wires have been extracted
+[INFO RCX-0442] 100% completion -- 739 wires have been extracted
+[INFO RCX-0045] Extract 106 nets, 488 rsegs, 488 caps, 813 ccs
+[INFO RCX-0015] Finished extracting s386.
+[INFO RCX-0016] Writing SPEF ...
+[INFO RCX-0443] 106 nets finished
+[INFO RCX-0017] Finished writing SPEF ...
+[WARNING PSM-0016] Voltage pad location (VSRC) file not specified, defaulting pad location to checkerboard pattern on core area.
+[WARNING PSM-0017] X direction bump pitch is not specified, defaulting to 140um.
+[WARNING PSM-0018] Y direction bump pitch is not specified, defaulting to 140um.
+[WARNING PSM-0063] Specified bump pitches of 140.000 and 140.000 are less than core width of 30.820 or core height of 29.920. Changing bump location to the center of the die at (20.470, 20.400).
+[WARNING PSM-0065] VSRC location not specified, using default checkerboard pattern with one VDD every size bumps in x-direction and one in two bumps in the y-direction
+[INFO PSM-0076] Setting metal node density to be standard cell height times 5.
+[WARNING PSM-0030] VSRC location at (20.470um, 20.400um) and size 10.000um, is not located on an existing power stripe node. Moving to closest node at (32.200um, 19.040um).
+[INFO PSM-0031] Number of PDN nodes on net VDD = 68.
+[INFO PSM-0064] Number of voltage sources = 1.
+[INFO PSM-0040] All PDN stripes on net VDD are connected.
+########## IR report #################
+Worstcase voltage: 1.80e+00 V
+Average IR drop  : 8.21e-05 V
+Worstcase IR drop: 4.82e-04 V
+######################################
+[WARNING PSM-0016] Voltage pad location (VSRC) file not specified, defaulting pad location to checkerboard pattern on core area.
+[WARNING PSM-0017] X direction bump pitch is not specified, defaulting to 140um.
+[WARNING PSM-0018] Y direction bump pitch is not specified, defaulting to 140um.
+[WARNING PSM-0063] Specified bump pitches of 140.000 and 140.000 are less than core width of 30.820 or core height of 29.920. Changing bump location to the center of the die at (20.470, 20.400).
+[WARNING PSM-0065] VSRC location not specified, using default checkerboard pattern with one VDD every size bumps in x-direction and one in two bumps in the y-direction
+[INFO PSM-0076] Setting metal node density to be standard cell height times 5.
+[INFO PSM-0031] Number of PDN nodes on net VSS = 68.
+[INFO PSM-0064] Number of voltage sources = 1.
+[INFO PSM-0040] All PDN stripes on net VSS are connected.
+########## IR report #################
+Worstcase voltage: 2.35e-04 V
+Average IR drop  : 8.32e-05 V
+Worstcase IR drop: 2.35e-04 V
+######################################
+
+==========================================================================
+finish check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unclocked register/latch pins.
+Warning: There are 6 unconstrained endpoints.
+
+==========================================================================
+finish report_tns
+--------------------------------------------------------------------------
+tns -0.97
+
+==========================================================================
+finish report_wns
+--------------------------------------------------------------------------
+wns -0.22
+
+==========================================================================
+finish report_worst_slack
+--------------------------------------------------------------------------
+worst slack -0.22
+
+==========================================================================
+finish report_clock_skew
+--------------------------------------------------------------------------
+Clock clk
+No launch/capture paths found.
+
+
+==========================================================================
+finish report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: v6 (input port clocked by clk)
+Endpoint: v13_D_8 (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10 ^ input external delay
+                  0.00    0.00    0.10 ^ v6 (in)
+     1    0.01                           v6 (net)
+                  0.00    0.00    0.10 ^ input8/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.08    0.09    0.19 ^ input8/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.01                           net8 (net)
+                  0.08    0.00    0.19 ^ _078_/A (sky130_fd_sc_hd__nor2_1)
+                  0.02    0.05    0.24 v _078_/Y (sky130_fd_sc_hd__nor2_1)
+     1    0.00                           net14 (net)
+                  0.02    0.00    0.24 v output14/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.02    0.07    0.31 v output14/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_8 (net)
+                  0.02    0.00    0.31 v v13_D_8 (out)
+                                  0.31   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10   clock uncertainty
+                          0.00    0.10   clock reconvergence pessimism
+                         -0.10    0.00   output external delay
+                                  0.00   data required time
+-----------------------------------------------------------------------------
+                                  0.00   data required time
+                                 -0.31   data arrival time
+-----------------------------------------------------------------------------
+                                  0.31   slack (MET)
+
+
+
+==========================================================================
+finish report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_6 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     1    0.01                           v3 (net)
+                  0.00    0.00    0.20 v input5/A (sky130_fd_sc_hd__buf_6)
+                  0.03    0.10    0.30 v input5/X (sky130_fd_sc_hd__buf_6)
+     4    0.02                           net5 (net)
+                  0.03    0.00    0.31 v _086_/B (sky130_fd_sc_hd__nand2b_4)
+                  0.06    0.07    0.37 ^ _086_/Y (sky130_fd_sc_hd__nand2b_4)
+     2    0.01                           _021_ (net)
+                  0.06    0.00    0.37 ^ rebuffer1/A (sky130_fd_sc_hd__dlymetal6s2s_1)
+                  0.06    0.10    0.48 ^ rebuffer1/X (sky130_fd_sc_hd__dlymetal6s2s_1)
+     1    0.00                           net16 (net)
+                  0.06    0.00    0.48 ^ _115_/B1 (sky130_fd_sc_hd__o221ai_1)
+                  0.11    0.11    0.59 v _115_/Y (sky130_fd_sc_hd__o221ai_1)
+     1    0.00                           _045_ (net)
+                  0.11    0.00    0.59 v _116_/A2 (sky130_fd_sc_hd__a21oi_1)
+                  0.18    0.21    0.81 ^ _116_/Y (sky130_fd_sc_hd__a21oi_1)
+     1    0.01                           net12 (net)
+                  0.18    0.00    0.81 ^ output12/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.05    0.11    0.92 ^ output12/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_6 (net)
+                  0.05    0.00    0.92 ^ v13_D_6 (out)
+                                  0.92   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.10    0.90   clock uncertainty
+                          0.00    0.90   clock reconvergence pessimism
+                         -0.20    0.70   output external delay
+                                  0.70   data required time
+-----------------------------------------------------------------------------
+                                  0.70   data required time
+                                 -0.92   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.22   slack (VIOLATED)
+
+
+
+==========================================================================
+finish report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_6 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     1    0.01                           v3 (net)
+                  0.00    0.00    0.20 v input5/A (sky130_fd_sc_hd__buf_6)
+                  0.03    0.10    0.30 v input5/X (sky130_fd_sc_hd__buf_6)
+     4    0.02                           net5 (net)
+                  0.03    0.00    0.31 v _086_/B (sky130_fd_sc_hd__nand2b_4)
+                  0.06    0.07    0.37 ^ _086_/Y (sky130_fd_sc_hd__nand2b_4)
+     2    0.01                           _021_ (net)
+                  0.06    0.00    0.37 ^ rebuffer1/A (sky130_fd_sc_hd__dlymetal6s2s_1)
+                  0.06    0.10    0.48 ^ rebuffer1/X (sky130_fd_sc_hd__dlymetal6s2s_1)
+     1    0.00                           net16 (net)
+                  0.06    0.00    0.48 ^ _115_/B1 (sky130_fd_sc_hd__o221ai_1)
+                  0.11    0.11    0.59 v _115_/Y (sky130_fd_sc_hd__o221ai_1)
+     1    0.00                           _045_ (net)
+                  0.11    0.00    0.59 v _116_/A2 (sky130_fd_sc_hd__a21oi_1)
+                  0.18    0.21    0.81 ^ _116_/Y (sky130_fd_sc_hd__a21oi_1)
+     1    0.01                           net12 (net)
+                  0.18    0.00    0.81 ^ output12/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.05    0.11    0.92 ^ output12/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_6 (net)
+                  0.05    0.00    0.92 ^ v13_D_6 (out)
+                                  0.92   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.10    0.90   clock uncertainty
+                          0.00    0.90   clock reconvergence pessimism
+                         -0.20    0.70   output external delay
+                                  0.70   data required time
+-----------------------------------------------------------------------------
+                                  0.70   data required time
+                                 -0.92   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.22   slack (VIOLATED)
+
+
+
+==========================================================================
+finish report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+finish max_slew_check_slack
+--------------------------------------------------------------------------
+1.1864190101623535
+
+==========================================================================
+finish max_slew_check_limit
+--------------------------------------------------------------------------
+1.48431396484375
+
+==========================================================================
+finish max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.7993
+
+==========================================================================
+finish max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.04106360673904419
+
+==========================================================================
+finish max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.043954998254776
+
+==========================================================================
+finish max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.9342
+
+==========================================================================
+finish max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+finish max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+finish max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+finish setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 1
+
+==========================================================================
+finish hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+finish critical path delay
+--------------------------------------------------------------------------
+0.9170
+
+==========================================================================
+finish critical path slack
+--------------------------------------------------------------------------
+-0.2170
+
+==========================================================================
+finish slack div critical path delay
+--------------------------------------------------------------------------
+-23.664122
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 743 u^2 81% utilization.
+
+[WARNING GUI-0012] Image size is not valid: 0px x 0px
+Elapsed time: 0:07.37[h:]min:sec. CPU time: user 3.32 sys 0.40 (50%). Peak memory: 156852KB.

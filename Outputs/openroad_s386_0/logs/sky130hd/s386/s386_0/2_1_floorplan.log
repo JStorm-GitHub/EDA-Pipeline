@@ -1,0 +1,180 @@
+OpenROAD v2.0-7988-g20b9074 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: ./platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0226] Finished LEF file:  ./platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+[INFO ODB-0222] Reading LEF file: ./platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  ./platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
+[WARNING STA-0337] port 'clk' not found.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unclocked register/latch pins.
+Warning: There are 6 unconstrained endpoints.
+number instances in verilog is 86
+[WARNING IFP-0028] Core area lower left (5.000, 5.000) snapped to (5.060, 5.440).
+[INFO IFP-0001] Added 11 rows of 67 site unithd with height 1.
+[INFO RSZ-0026] Removed 6 buffers.
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+
+==========================================================================
+floorplan final check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unclocked register/latch pins.
+Warning: There are 6 unconstrained endpoints.
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack 0.00
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: v6 (input port clocked by clk)
+Endpoint: v13_D_8 (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10 ^ input external delay
+                  0.00    0.00    0.10 ^ v6 (in)
+     1    0.00                           v6 (net)
+                  0.00    0.00    0.10 ^ _078_/A (sky130_fd_sc_hd__nor2_1)
+                  0.01    0.01    0.11 v _078_/Y (sky130_fd_sc_hd__nor2_1)
+     1    0.00                           v13_D_8 (net)
+                  0.01    0.00    0.11 v v13_D_8 (out)
+                                  0.11   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.05    0.05   clock uncertainty
+                          0.00    0.05   clock reconvergence pessimism
+                         -0.10   -0.05   output external delay
+                                 -0.05   data required time
+-----------------------------------------------------------------------------
+                                 -0.05   data required time
+                                 -0.11   data arrival time
+-----------------------------------------------------------------------------
+                                  0.16   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     4    0.01                           v3 (net)
+                  0.00    0.00    0.20 v _086_/A_N (sky130_fd_sc_hd__nand2b_1)
+                  0.10    0.14    0.34 v _086_/Y (sky130_fd_sc_hd__nand2b_1)
+     2    0.01                           _021_ (net)
+                  0.10    0.00    0.34 v _087_/C (sky130_fd_sc_hd__nor3_2)
+                  0.22    0.19    0.53 ^ _087_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.01                           _022_ (net)
+                  0.22    0.00    0.53 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_1)
+                  0.11    0.07    0.60 v _143_/Y (sky130_fd_sc_hd__a311oi_1)
+     1    0.00                           _002_ (net)
+                  0.11    0.00    0.60 v _146_/A1 (sky130_fd_sc_hd__o211ai_1)
+                  0.09    0.15    0.75 ^ _146_/Y (sky130_fd_sc_hd__o211ai_1)
+     1    0.00                           v13_D_11 (net)
+                  0.09    0.00    0.75 ^ v13_D_11 (out)
+                                  0.75   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -0.75   data arrival time
+-----------------------------------------------------------------------------
+                                  0.00   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     4    0.01                           v3 (net)
+                  0.00    0.00    0.20 v _086_/A_N (sky130_fd_sc_hd__nand2b_1)
+                  0.10    0.14    0.34 v _086_/Y (sky130_fd_sc_hd__nand2b_1)
+     2    0.01                           _021_ (net)
+                  0.10    0.00    0.34 v _087_/C (sky130_fd_sc_hd__nor3_2)
+                  0.22    0.19    0.53 ^ _087_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.01                           _022_ (net)
+                  0.22    0.00    0.53 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_1)
+                  0.11    0.07    0.60 v _143_/Y (sky130_fd_sc_hd__a311oi_1)
+     1    0.00                           _002_ (net)
+                  0.11    0.00    0.60 v _146_/A1 (sky130_fd_sc_hd__o211ai_1)
+                  0.09    0.15    0.75 ^ _146_/Y (sky130_fd_sc_hd__o211ai_1)
+     1    0.00                           v13_D_11 (net)
+                  0.09    0.00    0.75 ^ v13_D_11 (out)
+                                  0.75   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -0.75   data arrival time
+-----------------------------------------------------------------------------
+                                  0.00   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 547 u^2 59% utilization.
+
+Elapsed time: 0:01.12[h:]min:sec. CPU time: user 0.94 sys 0.10 (93%). Peak memory: 83104KB.

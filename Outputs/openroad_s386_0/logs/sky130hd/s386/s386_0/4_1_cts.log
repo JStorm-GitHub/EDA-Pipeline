@@ -1,0 +1,814 @@
+OpenROAD v2.0-7988-g20b9074 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO CTS-0049] Characterization buffer is: sky130_fd_sc_hd__clkbuf_4.
+[INFO CTS-0039] Number of created patterns = 12240.
+[INFO CTS-0084] Compiling LUT.
+Min. len    Max. len    Min. cap    Max. cap    Min. slew   Max. slew
+2           8           1           35          1           12          
+[WARNING CTS-0043] 1632 wires are pure wire and no slew degradation.
+TritonCTS forced slew degradation on these wires.
+[INFO CTS-0046]     Number of wire segments: 12240.
+[INFO CTS-0047]     Number of keys in characterization LUT: 1648.
+[INFO CTS-0048]     Actual min input cap: 1.
+[WARNING CTS-0083] No clock nets have been found.
+[INFO CTS-0008] TritonCTS found 0 clock nets.
+[WARNING CTS-0082] No valid clock nets in the design.
+[WARNING STA-0357] virtual clock clk can not be propagated.
+
+==========================================================================
+cts pre-repair check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unclocked register/latch pins.
+Warning: There are 6 unconstrained endpoints.
+
+==========================================================================
+cts pre-repair report_tns
+--------------------------------------------------------------------------
+tns -1.09
+
+==========================================================================
+cts pre-repair report_wns
+--------------------------------------------------------------------------
+wns -0.32
+
+==========================================================================
+cts pre-repair report_worst_slack
+--------------------------------------------------------------------------
+worst slack -0.32
+
+==========================================================================
+cts pre-repair report_clock_skew
+--------------------------------------------------------------------------
+Clock clk
+No launch/capture paths found.
+
+
+==========================================================================
+cts pre-repair report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: v6 (input port clocked by clk)
+Endpoint: v13_D_8 (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10 ^ input external delay
+                  0.00    0.00    0.10 ^ v6 (in)
+     1    0.00                           v6 (net)
+                  0.00    0.00    0.10 ^ input8/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.04    0.06    0.16 ^ input8/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           net8 (net)
+                  0.04    0.00    0.16 ^ _078_/A (sky130_fd_sc_hd__nor2_1)
+                  0.02    0.04    0.20 v _078_/Y (sky130_fd_sc_hd__nor2_1)
+     1    0.00                           net14 (net)
+                  0.02    0.00    0.20 v output14/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.02    0.07    0.27 v output14/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_8 (net)
+                  0.02    0.00    0.27 v v13_D_8 (out)
+                                  0.27   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.05    0.05   clock uncertainty
+                          0.00    0.05   clock reconvergence pessimism
+                         -0.10   -0.05   output external delay
+                                 -0.05   data required time
+-----------------------------------------------------------------------------
+                                 -0.05   data required time
+                                 -0.27   data arrival time
+-----------------------------------------------------------------------------
+                                  0.32   slack (MET)
+
+
+
+==========================================================================
+cts pre-repair report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     1    0.00                           v3 (net)
+                  0.00    0.00    0.20 v input5/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.07    0.10    0.30 v input5/X (sky130_fd_sc_hd__clkbuf_1)
+     4    0.01                           net5 (net)
+                  0.07    0.00    0.30 v _086_/A_N (sky130_fd_sc_hd__nand2b_1)
+                  0.08    0.18    0.48 v _086_/Y (sky130_fd_sc_hd__nand2b_1)
+     2    0.01                           _021_ (net)
+                  0.08    0.00    0.48 v _087_/C (sky130_fd_sc_hd__nor3_2)
+                  0.29    0.24    0.72 ^ _087_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.02                           _022_ (net)
+                  0.29    0.00    0.72 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_1)
+                  0.08    0.08    0.80 v _143_/Y (sky130_fd_sc_hd__a311oi_1)
+     1    0.00                           _002_ (net)
+                  0.08    0.00    0.80 v _146_/A1 (sky130_fd_sc_hd__o211ai_1)
+                  0.14    0.18    0.98 ^ _146_/Y (sky130_fd_sc_hd__o211ai_1)
+     1    0.00                           net10 (net)
+                  0.14    0.00    0.98 ^ output10/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.09    1.07 ^ output10/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_11 (net)
+                  0.03    0.00    1.07 ^ v13_D_11 (out)
+                                  1.07   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -1.07   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.32   slack (VIOLATED)
+
+
+
+==========================================================================
+cts pre-repair report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     1    0.00                           v3 (net)
+                  0.00    0.00    0.20 v input5/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.07    0.10    0.30 v input5/X (sky130_fd_sc_hd__clkbuf_1)
+     4    0.01                           net5 (net)
+                  0.07    0.00    0.30 v _086_/A_N (sky130_fd_sc_hd__nand2b_1)
+                  0.08    0.18    0.48 v _086_/Y (sky130_fd_sc_hd__nand2b_1)
+     2    0.01                           _021_ (net)
+                  0.08    0.00    0.48 v _087_/C (sky130_fd_sc_hd__nor3_2)
+                  0.29    0.24    0.72 ^ _087_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.02                           _022_ (net)
+                  0.29    0.00    0.72 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_1)
+                  0.08    0.08    0.80 v _143_/Y (sky130_fd_sc_hd__a311oi_1)
+     1    0.00                           _002_ (net)
+                  0.08    0.00    0.80 v _146_/A1 (sky130_fd_sc_hd__o211ai_1)
+                  0.14    0.18    0.98 ^ _146_/Y (sky130_fd_sc_hd__o211ai_1)
+     1    0.00                           net10 (net)
+                  0.14    0.00    0.98 ^ output10/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.09    1.07 ^ output10/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_11 (net)
+                  0.03    0.00    1.07 ^ v13_D_11 (out)
+                                  1.07   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -1.07   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.32   slack (VIOLATED)
+
+
+
+==========================================================================
+cts pre-repair report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+cts pre-repair max_slew_check_slack
+--------------------------------------------------------------------------
+1.2004607915878296
+
+==========================================================================
+cts pre-repair max_slew_check_limit
+--------------------------------------------------------------------------
+1.4918709993362427
+
+==========================================================================
+cts pre-repair max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.8047
+
+==========================================================================
+cts pre-repair max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+cts pre-repair max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+cts pre-repair max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.04101061075925827
+
+==========================================================================
+cts pre-repair max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.043954998254776
+
+==========================================================================
+cts pre-repair max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.9330
+
+==========================================================================
+cts pre-repair max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+cts pre-repair max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+cts pre-repair max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+cts pre-repair setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 1
+
+==========================================================================
+cts pre-repair hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+cts pre-repair critical path delay
+--------------------------------------------------------------------------
+1.0675
+
+==========================================================================
+cts pre-repair critical path slack
+--------------------------------------------------------------------------
+-0.3175
+
+==========================================================================
+cts pre-repair slack div critical path delay
+--------------------------------------------------------------------------
+-29.742389
+
+==========================================================================
+cts pre-repair report_design_area
+--------------------------------------------------------------------------
+Design area 659 u^2 72% utilization.
+
+[INFO RSZ-0058] Using max wire length 2395um.
+
+==========================================================================
+cts post-repair check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unclocked register/latch pins.
+Warning: There are 6 unconstrained endpoints.
+
+==========================================================================
+cts post-repair report_tns
+--------------------------------------------------------------------------
+tns -1.09
+
+==========================================================================
+cts post-repair report_wns
+--------------------------------------------------------------------------
+wns -0.32
+
+==========================================================================
+cts post-repair report_worst_slack
+--------------------------------------------------------------------------
+worst slack -0.32
+
+==========================================================================
+cts post-repair report_clock_skew
+--------------------------------------------------------------------------
+Clock clk
+No launch/capture paths found.
+
+
+==========================================================================
+cts post-repair report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: v6 (input port clocked by clk)
+Endpoint: v13_D_8 (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10 ^ input external delay
+                  0.00    0.00    0.10 ^ v6 (in)
+     1    0.00                           v6 (net)
+                  0.00    0.00    0.10 ^ input8/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.04    0.06    0.16 ^ input8/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           net8 (net)
+                  0.04    0.00    0.16 ^ _078_/A (sky130_fd_sc_hd__nor2_1)
+                  0.02    0.04    0.20 v _078_/Y (sky130_fd_sc_hd__nor2_1)
+     1    0.00                           net14 (net)
+                  0.02    0.00    0.20 v output14/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.02    0.07    0.27 v output14/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_8 (net)
+                  0.02    0.00    0.27 v v13_D_8 (out)
+                                  0.27   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.05    0.05   clock uncertainty
+                          0.00    0.05   clock reconvergence pessimism
+                         -0.10   -0.05   output external delay
+                                 -0.05   data required time
+-----------------------------------------------------------------------------
+                                 -0.05   data required time
+                                 -0.27   data arrival time
+-----------------------------------------------------------------------------
+                                  0.32   slack (MET)
+
+
+
+==========================================================================
+cts post-repair report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     1    0.00                           v3 (net)
+                  0.00    0.00    0.20 v input5/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.07    0.10    0.30 v input5/X (sky130_fd_sc_hd__clkbuf_1)
+     4    0.01                           net5 (net)
+                  0.07    0.00    0.30 v _086_/A_N (sky130_fd_sc_hd__nand2b_1)
+                  0.08    0.18    0.48 v _086_/Y (sky130_fd_sc_hd__nand2b_1)
+     2    0.01                           _021_ (net)
+                  0.08    0.00    0.48 v _087_/C (sky130_fd_sc_hd__nor3_2)
+                  0.29    0.24    0.72 ^ _087_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.02                           _022_ (net)
+                  0.29    0.00    0.72 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_1)
+                  0.08    0.08    0.80 v _143_/Y (sky130_fd_sc_hd__a311oi_1)
+     1    0.00                           _002_ (net)
+                  0.08    0.00    0.80 v _146_/A1 (sky130_fd_sc_hd__o211ai_1)
+                  0.14    0.18    0.98 ^ _146_/Y (sky130_fd_sc_hd__o211ai_1)
+     1    0.00                           net10 (net)
+                  0.14    0.00    0.98 ^ output10/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.09    1.07 ^ output10/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_11 (net)
+                  0.03    0.00    1.07 ^ v13_D_11 (out)
+                                  1.07   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -1.07   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.32   slack (VIOLATED)
+
+
+
+==========================================================================
+cts post-repair report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: v3 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v3 (in)
+     1    0.00                           v3 (net)
+                  0.00    0.00    0.20 v input5/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.07    0.10    0.30 v input5/X (sky130_fd_sc_hd__clkbuf_1)
+     4    0.01                           net5 (net)
+                  0.07    0.00    0.30 v _086_/A_N (sky130_fd_sc_hd__nand2b_1)
+                  0.08    0.18    0.48 v _086_/Y (sky130_fd_sc_hd__nand2b_1)
+     2    0.01                           _021_ (net)
+                  0.08    0.00    0.48 v _087_/C (sky130_fd_sc_hd__nor3_2)
+                  0.29    0.24    0.72 ^ _087_/Y (sky130_fd_sc_hd__nor3_2)
+     4    0.02                           _022_ (net)
+                  0.29    0.00    0.72 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_1)
+                  0.08    0.08    0.80 v _143_/Y (sky130_fd_sc_hd__a311oi_1)
+     1    0.00                           _002_ (net)
+                  0.08    0.00    0.80 v _146_/A1 (sky130_fd_sc_hd__o211ai_1)
+                  0.14    0.18    0.98 ^ _146_/Y (sky130_fd_sc_hd__o211ai_1)
+     1    0.00                           net10 (net)
+                  0.14    0.00    0.98 ^ output10/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.09    1.07 ^ output10/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_11 (net)
+                  0.03    0.00    1.07 ^ v13_D_11 (out)
+                                  1.07   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -1.07   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.32   slack (VIOLATED)
+
+
+
+==========================================================================
+cts post-repair report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+cts post-repair max_slew_check_slack
+--------------------------------------------------------------------------
+1.2004607915878296
+
+==========================================================================
+cts post-repair max_slew_check_limit
+--------------------------------------------------------------------------
+1.4918709993362427
+
+==========================================================================
+cts post-repair max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.8047
+
+==========================================================================
+cts post-repair max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+cts post-repair max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+cts post-repair max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.04101061075925827
+
+==========================================================================
+cts post-repair max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.043954998254776
+
+==========================================================================
+cts post-repair max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.9330
+
+==========================================================================
+cts post-repair max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+cts post-repair max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+cts post-repair max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+cts post-repair setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 1
+
+==========================================================================
+cts post-repair hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+cts post-repair critical path delay
+--------------------------------------------------------------------------
+1.0675
+
+==========================================================================
+cts post-repair critical path slack
+--------------------------------------------------------------------------
+-0.3175
+
+==========================================================================
+cts post-repair slack div critical path delay
+--------------------------------------------------------------------------
+-29.742389
+
+==========================================================================
+cts post-repair report_design_area
+--------------------------------------------------------------------------
+Design area 659 u^2 72% utilization.
+
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL             949.8 u
+legalized HPWL            973.8 u
+delta HPWL                    3 %
+
+Repair setup and hold violations...
+TNS end percent 5
+[INFO RSZ-0040] Inserted 2 buffers.
+[INFO RSZ-0041] Resized 24 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0033] No hold violations found.
+Placement Analysis
+---------------------------------
+total displacement        206.5 u
+average displacement        1.9 u
+max displacement           18.7 u
+original HPWL             974.6 u
+legalized HPWL           1224.7 u
+delta HPWL                   26 %
+
+
+==========================================================================
+cts final check_setup
+--------------------------------------------------------------------------
+Warning: There are 6 unclocked register/latch pins.
+Warning: There are 6 unconstrained endpoints.
+
+==========================================================================
+cts final report_tns
+--------------------------------------------------------------------------
+tns -0.48
+
+==========================================================================
+cts final report_wns
+--------------------------------------------------------------------------
+wns -0.10
+
+==========================================================================
+cts final report_worst_slack
+--------------------------------------------------------------------------
+worst slack -0.10
+
+==========================================================================
+cts final report_clock_skew
+--------------------------------------------------------------------------
+Clock clk
+No launch/capture paths found.
+
+
+==========================================================================
+cts final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: v6 (input port clocked by clk)
+Endpoint: v13_D_8 (output port clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.10    0.10 ^ input external delay
+                  0.00    0.00    0.10 ^ v6 (in)
+     1    0.00                           v6 (net)
+                  0.00    0.00    0.10 ^ input8/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.04    0.06    0.16 ^ input8/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           net8 (net)
+                  0.04    0.00    0.16 ^ _078_/A (sky130_fd_sc_hd__nor2_1)
+                  0.02    0.04    0.20 v _078_/Y (sky130_fd_sc_hd__nor2_1)
+     1    0.00                           net14 (net)
+                  0.02    0.00    0.20 v output14/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.02    0.07    0.27 v output14/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_8 (net)
+                  0.02    0.00    0.27 v v13_D_8 (out)
+                                  0.27   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.05    0.05   clock uncertainty
+                          0.00    0.05   clock reconvergence pessimism
+                         -0.10   -0.05   output external delay
+                                 -0.05   data required time
+-----------------------------------------------------------------------------
+                                 -0.05   data required time
+                                 -0.27   data arrival time
+-----------------------------------------------------------------------------
+                                  0.32   slack (MET)
+
+
+
+==========================================================================
+cts final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: v4 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v4 (in)
+     1    0.01                           v4 (net)
+                  0.00    0.00    0.20 v input6/A (sky130_fd_sc_hd__buf_8)
+                  0.03    0.10    0.30 v input6/X (sky130_fd_sc_hd__buf_8)
+     5    0.02                           net6 (net)
+                  0.03    0.00    0.30 v _087_/B (sky130_fd_sc_hd__nor3_4)
+                  0.23    0.24    0.54 ^ _087_/Y (sky130_fd_sc_hd__nor3_4)
+     4    0.02                           _022_ (net)
+                  0.23    0.00    0.54 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_2)
+                  0.09    0.07    0.61 v _143_/Y (sky130_fd_sc_hd__a311oi_2)
+     1    0.00                           _002_ (net)
+                  0.09    0.00    0.61 v _146_/A1 (sky130_fd_sc_hd__o211ai_2)
+                  0.11    0.16    0.77 ^ _146_/Y (sky130_fd_sc_hd__o211ai_2)
+     1    0.00                           net10 (net)
+                  0.11    0.00    0.77 ^ output10/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.08    0.85 ^ output10/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_11 (net)
+                  0.03    0.00    0.85 ^ v13_D_11 (out)
+                                  0.85   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -0.85   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.10   slack (VIOLATED)
+
+
+
+==========================================================================
+cts final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: v4 (input port clocked by clk)
+Endpoint: v13_D_11 (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.20    0.20 v input external delay
+                  0.00    0.00    0.20 v v4 (in)
+     1    0.01                           v4 (net)
+                  0.00    0.00    0.20 v input6/A (sky130_fd_sc_hd__buf_8)
+                  0.03    0.10    0.30 v input6/X (sky130_fd_sc_hd__buf_8)
+     5    0.02                           net6 (net)
+                  0.03    0.00    0.30 v _087_/B (sky130_fd_sc_hd__nor3_4)
+                  0.23    0.24    0.54 ^ _087_/Y (sky130_fd_sc_hd__nor3_4)
+     4    0.02                           _022_ (net)
+                  0.23    0.00    0.54 ^ _143_/C1 (sky130_fd_sc_hd__a311oi_2)
+                  0.09    0.07    0.61 v _143_/Y (sky130_fd_sc_hd__a311oi_2)
+     1    0.00                           _002_ (net)
+                  0.09    0.00    0.61 v _146_/A1 (sky130_fd_sc_hd__o211ai_2)
+                  0.11    0.16    0.77 ^ _146_/Y (sky130_fd_sc_hd__o211ai_2)
+     1    0.00                           net10 (net)
+                  0.11    0.00    0.77 ^ output10/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.03    0.08    0.85 ^ output10/X (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00                           v13_D_11 (net)
+                  0.03    0.00    0.85 ^ v13_D_11 (out)
+                                  0.85   data arrival time
+
+                  0.00    1.00    1.00   clock clk (rise edge)
+                          0.00    1.00   clock network delay (ideal)
+                         -0.05    0.95   clock uncertainty
+                          0.00    0.95   clock reconvergence pessimism
+                         -0.20    0.75   output external delay
+                                  0.75   data required time
+-----------------------------------------------------------------------------
+                                  0.75   data required time
+                                 -0.85   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.10   slack (VIOLATED)
+
+
+
+==========================================================================
+cts final report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+cts final max_slew_check_slack
+--------------------------------------------------------------------------
+1.193355679512024
+
+==========================================================================
+cts final max_slew_check_limit
+--------------------------------------------------------------------------
+1.48431396484375
+
+==========================================================================
+cts final max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.8040
+
+==========================================================================
+cts final max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+cts final max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+cts final max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.04123830050230026
+
+==========================================================================
+cts final max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.043954998254776
+
+==========================================================================
+cts final max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.9382
+
+==========================================================================
+cts final max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+cts final max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+cts final max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+cts final setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 1
+
+==========================================================================
+cts final hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+cts final critical path delay
+--------------------------------------------------------------------------
+0.8526
+
+==========================================================================
+cts final critical path slack
+--------------------------------------------------------------------------
+-0.1026
+
+==========================================================================
+cts final slack div critical path delay
+--------------------------------------------------------------------------
+-12.033779
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 743 u^2 81% utilization.
+
+Elapsed time: 0:06.86[h:]min:sec. CPU time: user 6.73 sys 0.09 (99%). Peak memory: 98988KB.

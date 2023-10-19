@@ -1,0 +1,104 @@
+Information: linking reference library : /mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m. (PSYN-878)
+Warning: The pin direction of 'INP' pin on 'ANTENNA_RVT' cell in the 'saed32rvt_ss0p95v25c' technology library is inconsistent with the same-name pin in the '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m' physical library. No physical link for the logical lib cell. (PSYN-058)
+Warning: The 'ANTENNA_RVT' cell in the 'saed32rvt_ss0p95v25c' technology library is being 
+	marked as "dont_use". (PSYN-039)
+Warning: The 'ANTENNA_RVT' cell in the 'saed32rvt_ss0p95v25c' technology library does not 
+	have corresponding physical cell description. (PSYN-024)
+Information: Loading local_link_library attribute {/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db}. (MWDC-290)
+
+  Linking design 's386'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (7 designs)               s386.CEL, etc
+  saed32rvt_ss0p95v25c (library) /mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db
+
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Floorplan loading succeeded.
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : s386
+Version: Q-2019.12
+Date   : Tue May 16 20:23:20 2023
+****************************************
+
+
+  Timing Path Group 'ideal_clock1'
+  -----------------------------------
+  Levels of Logic:               7.00
+  Critical Path Length:          1.88
+  Critical Path Slack:           0.01
+  Critical Path Clk Period:      2.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          6
+  Hierarchical Port Count:         30
+  Leaf Cell Count:                 87
+  Buf/Inv Cell Count:              25
+  Buf Cell Count:                   4
+  Inv Cell Count:                  21
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:        81
+  Sequential Cell Count:            6
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      154.011266
+  Noncombinational Area:    39.646465
+  Buf/Inv Area:             34.817729
+  Total Buffer Area:             8.13
+  Total Inverter Area:          26.69
+  Macro/Black Box Area:      0.000000
+  Net Area:                 19.498927
+  Net XLength        :           0.00
+  Net YLength        :           0.00
+  -----------------------------------
+  Cell Area:               193.657731
+  Design Area:             213.156658
+  Net Length        :            0.00
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:            97
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: xunil-03.coe.drexel.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.34
+  Mapping Optimization:                0.32
+  -----------------------------------------
+  Overall Compile Time:                1.98
+  Overall Compile Wall Clock Time:     2.03
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

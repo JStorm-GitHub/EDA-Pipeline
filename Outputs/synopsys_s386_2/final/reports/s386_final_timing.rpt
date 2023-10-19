@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : s386
+Version: Q-2019.12
+Date   : Tue May 16 20:46:12 2023
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v25c   Library: saed32rvt_ss0p95v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 125/125/125
+
+Information: Percent of Arnoldi-based delays = 13.10%
+
+  Startpoint: v0 (input port clocked by ideal_clock1)
+  Endpoint: DFF_1/q_reg
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock1 (rise edge)           0.00       0.00
+  clock network delay (ideal)              0.40       0.40
+  input external delay                     0.10       0.50 r
+  v0 (in)                                  0.00 @     0.50 r
+  U95/Y (INVX1_RVT)                        0.02 @     0.52 f
+  U77/Y (OR2X1_RVT)                        0.07 &     0.59 f
+  U85/Y (NOR3X0_RVT)                       0.10 &     0.69 r
+  U99/Y (NAND3X0_RVT)                      0.09 &     0.78 f
+  U147/Y (INVX0_RVT)                       0.07 &     0.85 r
+  U140/Y (AO22X1_RVT)                      0.09 &     0.94 r
+  DFF_1/d (dff_5)                          0.00       0.94 r
+  DFF_1/q_reg/D (DFFX1_RVT)                0.00 &     0.94 r
+  data arrival time                                   0.94
+
+  clock ideal_clock1 (rise edge)           2.00       2.00
+  clock network delay (propagated)         0.00       2.00
+  clock uncertainty                       -0.05       1.95
+  DFF_1/q_reg/CLK (DFFX1_RVT)              0.00       1.95 r
+  library setup time                      -0.07       1.88
+  data required time                                  1.88
+  -----------------------------------------------------------
+  data required time                                  1.88
+  data arrival time                                  -0.94
+  -----------------------------------------------------------
+  slack (MET)                                         0.94
+
+
+1
